@@ -1,0 +1,5 @@
+<gcl>
+    <entry time="0.0" gateState="00001000"/>
+    <entry time="1.0" gateState="00000011"/>
+    <entry time="2.0" gateState="00000000"/>
+</gcl>
