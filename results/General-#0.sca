@@ -1,0 +1,44 @@
+version 3
+run General-0-20241215-22:16:47-4036
+attr configname General
+attr datetime 20241215-22:16:47
+attr datetimef 20241215-221647
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network tsn_simulation.TsnSimulation
+attr processid 4036
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network tsn_simulation.TsnSimulation
+config sim-time-limit 20s
+config ned-path .;tsn_simulation
+config debug-on-errors true
+config print-undisposed true
+
+par TsnSimulation.switch1 typename "\"tsn_simulation.TsnSwitch\""
+par TsnSimulation.switch1 gclFilePath "\"models/GclConfig.xml\""
+par TsnSimulation.switch1 gclCycleTime 1
+par TsnSimulation.switch2 typename "\"tsn_simulation.TsnSwitch\""
+par TsnSimulation.switch2 gclFilePath "\"models/GclConfig.xml\""
+par TsnSimulation.switch2 gclCycleTime 1
+par TsnSimulation.ttTalker typename "\"tsn_simulation.TrafficGenerator\""
+par TsnSimulation.ttTalker sendInterval 2
+par TsnSimulation.beSender typename "\"tsn_simulation.TrafficGenerator\""
+par TsnSimulation.beSender sendInterval 5
+par TsnSimulation.interferenceGen typename "\"tsn_simulation.TrafficGenerator\""
+par TsnSimulation.interferenceGen sendInterval 10
+par TsnSimulation.ttListener typename "\"tsn_simulation.TrafficGenerator\""
+par TsnSimulation.ttListener sendInterval 10
+par TsnSimulation.beReceiver typename "\"tsn_simulation.TrafficGenerator\""
+par TsnSimulation.beReceiver sendInterval 10
+par TsnSimulation.interferenceReceiver typename "\"tsn_simulation.TrafficGenerator\""
+par TsnSimulation.interferenceReceiver sendInterval 10
+par TsnSimulation typename "\"tsn_simulation.TsnSimulation\""
+
